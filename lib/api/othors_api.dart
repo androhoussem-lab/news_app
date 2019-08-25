@@ -29,8 +29,8 @@ class AuthorsApi{
       var jsonData = jsonDecode(response.body);//convert String response to json 'Map'
       var data = jsonData['data']; //fetch the json array content with key 'data' in this state
       for(var item in data){
-        Author author = Author(item['id'].toString(), item['name'], item['email'].toString(),item['avatar'].toString() );
-        authors.add(author);
+        Author author = Author(item['id'].toString(), item['name'], item['email'].toString(),item['avatar'].toString() ); //prepare model 
+        authors.add(author);//save model to the list
 
       }
     }
